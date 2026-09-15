@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitloop-app
+  namespace: gitloop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitloop-app
+  template:
+    metadata:
+      labels:
+        app: gitloop-app
+    spec:
+      containers:
+        - name: gitloop-app
+          image: varsha200/gitloop-app:1
+          ports:
+            - containerPort: 3000
