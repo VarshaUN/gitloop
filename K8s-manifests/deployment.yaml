@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: gitloop-app
-          image: varsha200/gitloop-app:1
+          image: varsha200/gitloop-app:17
           ports:
             - containerPort: 3000
